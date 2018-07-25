@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="list-group">
+		<a class="list-group-item list-group-item-action flex-column align-items-start active">
+			<h1 class="heading">Proposal List</h1>
+		</a>
+
+		<span *ngFor="let proposal of proposals" class="list-group-item list-group-item-action flex-column align-items-start ">
+			<a (click)="goToShow(proposal)" class="proposal-link">
+				<div class="d-flex w-100 justify-content-between">
+	      	<h5 class="mb-1 proposal-title">{{ proposal.customer }}</h5>
+	      	<small class="text-muted">3 days ago</small>
+	    	</div>
+	    	<p class="mb-1">{{ proposal.hourly_rate * proposal.estimated_hours | currency:'USD':true:'.0' }} </p>
+			</a>
+		</span>
+	</div>
+</div>

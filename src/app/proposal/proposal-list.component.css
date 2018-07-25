@@ -1,0 +1,8 @@
+.proposal-link:hover {
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.proposal-title {
+	color: black;
+}
